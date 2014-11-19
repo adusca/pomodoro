@@ -8,5 +8,8 @@ def sendmessage(title, message, minutes):
     notice.show()
     return
 
-minutes = int(raw_input("How long? (in minutes) "))
-sendmessage("Time is up!", "Take a 5 minutes break", minutes)
+minutes = int(raw_input("How many minutes should a pomodoro last? "))
+
+while True:
+    sendmessage("Time is up!", "Take a 5 minutes break", minutes)
+    sendmessage("The break is over!","Time to got back to work", 5)
